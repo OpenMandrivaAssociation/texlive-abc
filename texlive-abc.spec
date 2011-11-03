@@ -1,9 +1,15 @@
+# revision 15878
+# category Package
+# catalog-ctan /macros/latex/contrib/abc
+# catalog-date 2008-03-08 20:47:21 +0100
+# catalog-license lppl
+# catalog-version .0
 Name:		texlive-abc
-Version:	20080308
+Version:	.0
 Release:	1
 Summary:	Support ABC music notation in LaTeX
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive//macros/latex/contrib/abc
+URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/abc
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/abc.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/abc.doc.tar.xz
@@ -29,11 +35,13 @@ inclusion in your document.
     %_texmf_mktexlsr_post
 
 %preun
-    %_texmf_mktexlsr_preun
+    if [ $1 -eq 0 ]; then
+	%_texmf_mktexlsr_pre
+    fi
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mltexlsr_post
+	%_texmf_mktexlsr_post
     fi
 
 #-----------------------------------------------------------------------
@@ -49,6 +57,7 @@ inclusion in your document.
 #- source
 %doc %{_texmfdistdir}/source/latex/abc/abc.dtx
 %doc %{_texmfdistdir}/source/latex/abc/abc.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -59,3 +68,5 @@ inclusion in your document.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
