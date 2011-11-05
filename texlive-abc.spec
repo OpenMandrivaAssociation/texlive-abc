@@ -5,7 +5,7 @@
 # catalog-license lppl
 # catalog-version .0
 Name:		texlive-abc
-Version:	.0
+Version:	20080308
 Release:	1
 Summary:	Support ABC music notation in LaTeX
 Group:		Publishing
