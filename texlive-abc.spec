@@ -34,7 +34,6 @@ inclusion in your document.
 	%{_sbindir}/texlive.post
     fi
 
-
 #-----------------------------------------------------------------------
 %files
 %{_texmfdistdir}/tex/latex/abc/abc.sty
