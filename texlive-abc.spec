@@ -6,7 +6,7 @@
 # catalog-version .0
 Name:		texlive-abc
 Version:	20080308
-Release:	6
+Release:	7
 Summary:	Support ABC music notation in LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/abc
