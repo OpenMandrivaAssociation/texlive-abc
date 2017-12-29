@@ -1,12 +1,6 @@
-# revision 15878
-# category Package
-# catalog-ctan /macros/latex/contrib/abc
-# catalog-date 2008-03-08 20:47:21 +0100
-# catalog-license lppl
-# catalog-version .0
 Name:		texlive-abc
-Version:	20080308
-Release:	10
+Version:	2.0b
+Release:	1
 Summary:	Support ABC music notation in LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/abc
@@ -36,17 +30,10 @@ inclusion in your document.
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/tex/latex/abc/abc.sty
-%{_texmfdistdir}/tex/latex/abc/mup.sty
-%doc %{_texmfdistdir}/doc/latex/abc/README
-%doc %{_texmfdistdir}/doc/latex/abc/abc.pdf
-%doc %{_texmfdistdir}/doc/latex/abc/example.tex
-%doc %{_texmfdistdir}/doc/latex/abc/mupexa.tex
-%doc %{_texmfdistdir}/doc/latex/abc/poll.abc
-%doc %{_texmfdistdir}/doc/latex/abc/simple.mup
+%{_texmfdistdir}/tex/latex/abc
+%doc %{_texmfdistdir}/doc/latex/abc
 #- source
-%doc %{_texmfdistdir}/source/latex/abc/abc.dtx
-%doc %{_texmfdistdir}/source/latex/abc/abc.ins
+%doc %{_texmfdistdir}/source/latex/abc
 
 #-----------------------------------------------------------------------
 %prep
@@ -57,18 +44,3 @@ inclusion in your document.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 20080308-2
-+ Revision: 749043
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20080308-1
-+ Revision: 719757
-- texlive-abc
-- texlive-abc
-- texlive-abc
-- texlive-abc
-- texlive-abc
-
