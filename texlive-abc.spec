@@ -1,13 +1,13 @@
 Name:		texlive-abc
-Version:	2.0b
-Release:	2
+Version:	41157
+Release:	1
 Summary:	Support ABC music notation in LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/abc
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/abc.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/abc.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/abc.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/abc.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/abc.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/abc.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -21,12 +21,12 @@ established utility abcm2ps) and hence to the format needed for
 inclusion in your document.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -37,7 +37,8 @@ inclusion in your document.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -q -c -a1 -a2
+%autopatch -p1
 
 %build
 
