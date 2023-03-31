@@ -1,6 +1,6 @@
 Name:		texlive-abc
 Version:	41157
-Release:	1
+Release:	2
 Summary:	Support ABC music notation in LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/abc
