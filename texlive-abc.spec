@@ -3,7 +3,7 @@ Version:	41157
 Release:	2
 Summary:	Support ABC music notation in LaTeX
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/abc
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/abc
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/abc.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/abc.doc.r%{version}.tar.xz
